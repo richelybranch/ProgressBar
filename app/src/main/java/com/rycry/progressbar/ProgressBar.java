@@ -2,16 +2,14 @@ package com.rycry.progressbar;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class ProgressBar extends AppCompatActivity {
 
-    private ProgressBar progressBar;
+    private android.widget.ProgressBar progressBar;
     private Button startButton;
     private int progressStatus = 0;
     private Handler handler = new Handler();
@@ -30,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 // Inicia un hilo para simular un proceso en segundo plano
                 new Thread(new Runnable() {
                     public void run() {
+
+                        // Lógica para simular el progreso...
                         while (progressStatus < 100) {
                             progressStatus += 1;
 
